@@ -1,0 +1,44 @@
+@charset "UTF-8";
+*{
+    padding: 0;
+    margin: 0;
+}
+.container-content{
+    display: flex; 
+    flex-wrap: wrap;
+}
+.content-main{
+    font-size: 12px;
+}
+.instrument{
+    width: 14%;
+    margin: 0 20px;
+    font-family: Helvetica, sans-serif;
+
+}
+img{
+    width: 100%;
+}
+p.p-disable{
+    text-decoration: line-through;
+    color: rgb(113, 113, 113);
+    font-size: 10px;
+}
+.text-green{
+    color: rgb(102, 218, 102);
+    font-size: 15px;
+}
+small{
+    font-size: 10px;
+    margin-bottom: 6%;
+}
+.strong{
+    font-weight: bold;
+    
+}
+span.value{
+font-size: 20px;
+}
+@media screen and (max-width: 1200px) {
+   
+  }
