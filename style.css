@@ -1,63 +1,85 @@
-@charset "UTF-8";
-* {
-    padding: 0;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container-content {
     display: flex;
     flex-wrap: wrap;
-}
-
-.content-main {
-    font-size: 12px;
+    gap: 20px;
 }
 
 .instrument {
-    width: 14%;
-    margin: 0 20px;
-    font-family: Helvetica, sans-serif;
+    flex: 1;
+    border: 1px solid #ddd;
+    overflow: hidden;
 }
 
-img {
+.text-instrument {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-main,
+.content-main-2 {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.content-main img {
     width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-p.p-disable {
+.p-disable {
     text-decoration: line-through;
-    color: rgb(113, 113, 113);
-    font-size: 10px;
+    color: #888;
 }
 
 .text-green {
-    color: rgb(102, 218, 102);
-    font-size: 15px;
-}
-
-small {
-    font-size: 10px;
-    margin-bottom: 6%;
+    color: #008000;
 }
 
 .strong {
     font-weight: bold;
 }
 
-span.value {
-    font-size: 20px;
-}
-
-/* Adaptações para dispositivos menores */
-@media screen and (max-width: 1200px) {
+/* Estilos para celular */
+@media (max-width: 576px) {
     .instrument {
-        width: 30%; /* Ajuste o tamanho conforme necessário */
+        flex: 100%;
     }
 }
 
-/* Adaptações para dispositivos ainda menores (tablets, smartphones) */
-@media screen and (max-width: 768px) {
+/* Estilos para tablet */
+@media (min-width: 577px) and (max-width: 768px) {
     .instrument {
-        width: 100%; /* Ocupa toda a largura */
-        margin: 0 0 20px 0; /* Adiciona um espaço inferior */
+        flex: 50%;
+    }
+}
+
+/* Estilos para computador */
+@media (min-width: 769px) and (max-width: 992px) {
+    .instrument {
+        flex: 33.33%;
+    }
+}
+
+/* Estilos para televisão e PC grandes */
+@media (min-width: 993px) {
+    .instrument {
+        flex: 16.6667%;
     }
 }
